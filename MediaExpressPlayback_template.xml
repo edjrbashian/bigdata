@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+
+<xmeml>
+<![CDATA[BMD:22 serialization::archive 5 0 5 16 1920 1080 0 0 11 2 48000 102 1001 30000 23 /Volumes/CineHD/Capture 23 /Volumes/CineHD/Capture 0 8 0 0 0 2 0 0 0 0  0  0 0 0 0 0 0 5 0 0 0]]>
+    <clip>
+        <name>FILENAME</name>
+        <duration>FRAMES</duration>
+        <rate>
+            <ntsc>TRUE</ntsc>
+            <timebase>30</timebase>
+        </rate>
+        <file id="FILENAME">
+            <name>FILENAME</name>
+            <pathurl>
+            file%3A//PATHURL
+            </pathurl>
+            <timecode>
+                <string>00:00:00:00</string>
+                <displayformat>NDF</displayformat>
+                <reel>
+                    <name>None</name>
+                </reel>
+            </timecode>
+            <media>
+                <video>
+                    <duration>FRAMES</duration>
+                    <samplecharacteristics>
+                        <width>1920</width>
+                        <height>1080</height>
+                        <fielddominance>upper</fielddominance>
+                    </samplecharacteristics>
+                </video>
+                <audio>
+                    <samplecharacteristics>
+                        <samplerate>0</samplerate>
+                        <depth>16</depth>
+                    </samplecharacteristics>
+                    <channelcount>0</channelcount>
+                </audio>
+            </media>
+        </file>
+        <comments>
+            <clipcommentb>
+            BMD:22 serialization::archive 5 0 0 0 0 17 0 0 0 24 MediaLib::sequenceDigits 1 0 23 MediaLib::sequenceStart 1 0 23 MediaLib:audioBigEndian 1 0 32 MediaLib:audioEncodingParameters 0  17 MediaLib:clipSize 9 906216557 19 MediaLib:imageCodec 3 104 32 MediaLib:imageEncodingParameters 0  19 MediaLib:imageFlags 1 0 20 MediaLib:imageFourCC 10 1634755432 25 MediaLib:imageOrientation 1 0 21 MediaLib:imageRowSize 1 0 23 MediaLib:sequencePrefix 0  23 MediaLib:videoContainer 3 102 19 MediaLib:videoFlags 1 0 24 MediaLib:videoStereoMode 1 0 14 xmp:ModifyDate 25 2012-01-30T04:10:24-08:00 16 xmpDM:timeFormat 19 2997NonDropTimecode
+            </clipcommentb>
+        </comments>
+    </clip>
+</xmeml>
+
+
+
