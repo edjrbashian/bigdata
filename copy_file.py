@@ -11,3 +11,11 @@ os.system("scp edjrbash@ssvbigdata:/users/shared/MediaExpress/PlayMediaExpress.s
 #to copy from the ssvbigdata cloudsat video files use this line
  
 scp edjrbash@ssvbigdata:/Volumes/SSV11TR6B_backup/repository/earth/cloudsat/cloud_20140630_080112.mov /Users/edjrbash/Desktop/Big_Data
+
+
+# copy from local machine to remote machine
+scp localfile user@host:/path/to/whereyouwant/thefile
+or
+
+# copy from remote machine to local machine
+scp user@host:/path/to/remotefile localfile

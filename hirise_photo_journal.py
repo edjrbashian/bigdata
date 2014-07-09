@@ -4,16 +4,11 @@ import ctypes
 from HTMLParser import HTMLParser
 import webbrowser
 import urllib
-
+from BeautifulSoup import BeautifulSoup
 #this script will aim to download all SDO instrument videos ending with .mp4 
-#print yesterdays date
-yesterday = date.today() - timedelta(1)
-yesterday_date = yesterday.strftime('%Y/%m/%d/')
-yesterday_date_url = yesterday.strftime('%Y%m%d')
-print "Yesterdays Date: " +yesterday_date
 
-#newest videos are from the day before
-web_url = 'http://sdo.gsfc.nasa.gov/assets/img/dailymov/' + yesterday_date
+
+web_url = 'http://photojournal.jpl.nasa.gov/mission/MRO?subselect=Instrument%3AHigh+Resolution+Imaging+Science+Experiment+%28HiRISE%29%3A' 
 print "Root  " + web_url
 
 response = urllib2.urlopen(web_url)
@@ -32,19 +27,21 @@ class MyHTMLParser(HTMLParser):
                # If href is defined, print it.
                if name == "href":
                 #only download mp4 files
-                    if value.endswith(".mp4"):
+                    if value.endswith(".jpg"):
                        list_of_value.append(value)
                        self.output=value
                        
 parser = MyHTMLParser()
 parser.feed(html)
+number_of_files = len(list_of_value)
 
 #complete the link with the parser output
 for i in list_of_value:
-  
-  imgurl = web_url + i
-  file_name=  i
-  output_folder = '/Users/edjrbash/Desktop/Big_Data/Media/'
+
+  imgurl = "http://photojournal.jpl.nasa.gov" + i
+  file_name = i.split('/')[-1]
+  #file_name=  i
+  output_folder = '/Users/edjrbash/Desktop/Big_Data/Media/Hirise/'
   urllib.urlretrieve(imgurl, output_folder + file_name)
-  print(i + "   File Downloaded")
-print("SDO Event Videos Successfully Downloaded Job")
+  print(file_name+ "   File Downloaded")
+print("Hirise Successfully Downloaded "+str(number_of_files)+" files")
